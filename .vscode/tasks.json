@@ -1,0 +1,36 @@
+{
+    // VSCode Tasks wit sbt.
+    // If you do not use windows, COMMENT OUT options of sbtWatch
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sbtWatch",
+            "type": "shell",
+            "command": "sbt",
+            "args": [
+                "--warn",
+                "~ testQuick"
+            ],
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": [
+                        "/d",
+                        "/c"
+                    ]
+                }
+            },
+        },
+        {
+            "label": "sbtShowVersion",
+            "type": "shell",
+            "command": "sbt",
+            "args": [
+                "--version"
+            ]
+        },
+    ]
+}
